@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guess the Number</title>
+</head>
+<body>
+  <h1>Guess the Secret Number!</h1>
+  <input type="number" id="numberInput" placeholder="Enter a number">
+  <button onclick="checkNumber()">Check</button>
+  <p id="message"></p>
+
+  <script>
+    const secretNumber = 2125512121524; 
+
+    function checkNumber() {
+      const userNumber = parseInt(document.getElementById("numberInput").value);
+      const message = document.getElementById("message");
+
+      if (isNaN(userNumber)) {
+        message.textContent = "Please enter a valid number.";
+      } else if (userNumber === secretNumber) {
+        message.textContent = "🎉 https://www.youtube.com/channel/UCjkV151_mA77TKdFdbT52Zw";
+      } else {
+        message.textContent = "❌ Wrong number, try again.";
+      }
+    }
+  </script>
+</body>
+</html>
